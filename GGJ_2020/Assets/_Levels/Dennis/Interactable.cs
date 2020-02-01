@@ -76,8 +76,6 @@ public class Interactable : MonoBehaviour
         {
             trashScript.AddTrash();
         }
-
-
     }
     private void StageTimer()
     {
