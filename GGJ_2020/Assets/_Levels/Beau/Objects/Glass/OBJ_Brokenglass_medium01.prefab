@@ -5294,7 +5294,7 @@ GameObject:
   - component: {fileID: 288341476461753028}
   - component: {fileID: 1622695570658638701}
   m_Layer: 0
-  m_Name: FBX_brokenglass
+  m_Name: OBJ_Brokenglass_medium01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5308,7 +5308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4183593766231037585}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.81, y: 3.05, z: 0.042}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 16.892023, y: 268.71686, z: 594.83496}
   m_Children:
   - {fileID: 1036175102482126646}
