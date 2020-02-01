@@ -7,7 +7,7 @@ using TMPro;
 public class ProblemList : MonoBehaviour
 {
     //private serialized
-    [SerializeField] private TextMeshProUGUI[] statusChanger;
+    [SerializeField] private Text[] statusChanger;
     [SerializeField] private Image[] panelProblem;
 
     [SerializeField] private GameObject listCanvas;
