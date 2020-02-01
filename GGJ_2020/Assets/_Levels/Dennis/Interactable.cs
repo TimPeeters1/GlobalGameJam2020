@@ -93,19 +93,26 @@ public class Interactable : MonoBehaviour
         currentObject = objectChanges;
 
         //Bij stage 1 is alles onder controle
-        if (currentStage == 2)
+        if(currentStage == 1)
+        {
+            ProblemList.Instance.UpdateList(interactableNumber, 1);
+        }
+        else if (currentStage == 2)
         {
             currentObject[0].SetActive(true);
+            ProblemList.Instance.UpdateList(interactableNumber, 2);
         }
         else if (currentStage == 3)
         {
             currentObject[0].SetActive(false);
             currentObject[1].SetActive(true);
+            ProblemList.Instance.UpdateList(interactableNumber, 3);
         }
         else if (currentStage == 4)
         {
             currentObject[1].SetActive(false);
             currentObject[2].SetActive(true);
+            ProblemList.Instance.UpdateList(interactableNumber, 4);
         }
         //Bij stage 5 is het object helemaal kapot
         else if (currentStage == 5 && lastStage)
