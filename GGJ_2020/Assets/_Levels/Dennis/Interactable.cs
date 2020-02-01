@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    [Header("General Stuff")]
+    //protected
+    [SerializeField] protected int interactableNumber;
+    protected float currentStage = 1;
+
     //private serialized
     [SerializeField] private float repairedToBrokenTime;
     [SerializeField] private float nextBrokenStageTime;
-    [SerializeField] private float currentStage = 1;
+    [SerializeField] private bool trashBin = false;
+    [SerializeField] private TrashBin trashScript;
 
     //private
     private float currentNextBrokenStageTimer;
@@ -63,6 +69,16 @@ public class Interactable : MonoBehaviour
             }
         }
     }
+    public virtual void Interact()
+    {
+        //Interacting
+        if (!trashBin)
+        {
+            trashScript.AddTrash();
+        }
+
+
+    }
     private void StageTimer()
     {
         currentNextBrokenStageTimer = Timer(currentNextBrokenStageTimer);
@@ -74,42 +90,34 @@ public class Interactable : MonoBehaviour
         }
         
     }
-    protected void Stages(GameObject[] objectChanges)
+    protected void Stages(GameObject[] objectChanges, bool lastStage)
     {
         currentObject = objectChanges;
 
         //Bij stage 1 is alles onder controle
-        if (currentStage == 1)
+        if (currentStage == 2)
         {
-            ResetObject();
-        }
-        else if (currentStage == 2)
-        {
-            ResetObject();
             currentObject[0].SetActive(true);
         }
         else if (currentStage == 3)
         {
-            ResetObject();
+            currentObject[0].SetActive(false);
             currentObject[1].SetActive(true);
         }
         else if (currentStage == 4)
         {
-            ResetObject();
+            currentObject[1].SetActive(false);
             currentObject[2].SetActive(true);
         }
         //Bij stage 5 is het object helemaal kapot
-        else if (currentStage == 5)
+        else if (currentStage == 5 && lastStage)
         {
             Debug.Log("KABOOOOOMMM, you're dead");
+            currentObject[2].SetActive(false);
+            ShipManagement.Instance.GameOver();
             //The thing is broken, the player loses
         }
     }
-    public virtual void Interact()
-    {
-        //Interacting
-    }
-
     private float Timer(float timer)
     {
         timer -= Time.deltaTime;

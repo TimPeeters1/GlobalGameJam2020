@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Window : Interactable
+public class GeneralBroken : Interactable
 {
-    [SerializeField] private int interactableNumber;
-
     //private serialized
-    [SerializeField] private GameObject[] glassBrokenStages;
+    [SerializeField] private GameObject[] objectBrokenStages;
 
     public override void Awake()
     {
@@ -15,8 +13,13 @@ public class Window : Interactable
     }
     public override void Update()
     {
+        if (currentStage == 5)
+        {
+            return;
+        }
+
         base.Update();
-        Stages(glassBrokenStages);
+        Stages(objectBrokenStages, true);
     }
     public override void Interact()
     {
@@ -25,6 +28,5 @@ public class Window : Interactable
         ResetObject();
 
         BrokenObjectManager.Instance.DisableScript(interactableNumber);
-        Debug.Log("Window");
     }
 }
