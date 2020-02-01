@@ -50,7 +50,7 @@ public class ProblemList : MonoBehaviour
     {
         if(stageProblem == 1)
         {
-            panelProblem[problem].color = new Color32(255, 0, 0, 255);
+            panelProblem[problem].color = new Color32(0, 255, 0, 255);
             statusChanger[problem].text = "Operational";
         }
         else if (stageProblem == 2)
@@ -65,7 +65,7 @@ public class ProblemList : MonoBehaviour
         }
         else if (stageProblem == 4)
         {
-            panelProblem[problem].color = new Color32(0, 255, 0, 255);
+            panelProblem[problem].color = new Color32(255, 0, 0, 255);
             statusChanger[problem].text = "Danger";
         }
     }

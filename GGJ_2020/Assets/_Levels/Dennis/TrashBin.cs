@@ -25,6 +25,23 @@ public class TrashBin : Interactable
     public override void Update()
     {
         base.Update();
+
+        if(trashCount > (maxTrash * 0.75f))
+        {
+            ProblemList.Instance.UpdateList(interactableNumber, 4);
+        }
+        else if(trashCount > (maxTrash * 0.50f))
+        {
+            ProblemList.Instance.UpdateList(interactableNumber, 3);
+        }
+        else if (trashCount > (maxTrash * 0.25f))
+        {
+            ProblemList.Instance.UpdateList(interactableNumber, 2);
+        }
+        else
+        {
+            ProblemList.Instance.UpdateList(interactableNumber, 1);
+        }
     }
     public override void Interact()
     {

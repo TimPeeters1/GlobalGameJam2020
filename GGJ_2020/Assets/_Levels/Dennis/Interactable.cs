@@ -76,6 +76,9 @@ public class Interactable : MonoBehaviour
         {
             trashScript.AddTrash();
         }
+
+        ProblemList.Instance.UpdateList(interactableNumber, 1);
+
     }
     private void StageTimer()
     {

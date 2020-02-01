@@ -46,13 +46,10 @@ public class BrokenObjectManager : MonoBehaviour
         }
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         NextEventChecker();
     }
-
     private void NextEventChecker()
     {
         currentNextEventTimer = Timer(currentNextEventTimer);

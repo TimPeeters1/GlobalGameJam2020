@@ -2114,7 +2114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2595,7 +2595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2911,7 +2911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8113585404d56534182d5bd33fae4a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextEventTime: 5
+  nextEventTimeMin: 4
+  nextEventTimeMax: 8
   interactableActive: 00000000000000
   interactables:
   - {fileID: 924766987}
@@ -3683,7 +3684,7 @@ GameObject:
   - component: {fileID: 495734458}
   - component: {fileID: 495734457}
   m_Layer: 0
-  m_Name: Problem 2
+  m_Name: Problem 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3704,7 +3705,7 @@ RectTransform:
   - {fileID: 1712749475}
   - {fileID: 1652890127}
   m_Father: {fileID: 977402141}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3724,7 +3725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4162,7 +4163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f508cf740e44cd4bb970947913d0214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableNumber: 2
+  interactableNumber: 0
   repairedToBrokenTime: 5
   nextBrokenStageTime: 5
   trashBin: 0
@@ -4206,7 +4207,7 @@ Transform:
   - {fileID: 25013463}
   - {fileID: 1620268150}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &648376866
 GameObject:
@@ -5849,7 +5850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5906,7 +5907,7 @@ Transform:
   - {fileID: 1321264226}
   - {fileID: 963051657}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &924766985
 BoxCollider:
@@ -5933,7 +5934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451cc178c2d416c47ad5124152dddf5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableNumber: 0
+  interactableNumber: 1
   repairedToBrokenTime: 10
   nextBrokenStageTime: 5
   trashBin: 0
@@ -6244,8 +6245,8 @@ RectTransform:
   m_Children:
   - {fileID: 1624906890}
   - {fileID: 1285029749}
-  - {fileID: 1158892256}
   - {fileID: 495734456}
+  - {fileID: 1158892256}
   - {fileID: 1545908822}
   - {fileID: 1862283622}
   - {fileID: 887359593}
@@ -6850,7 +6851,7 @@ Transform:
   - {fileID: 1138789862}
   - {fileID: 1882458571}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1138708281
 MonoBehaviour:
@@ -6864,7 +6865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451cc178c2d416c47ad5124152dddf5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableNumber: 3
+  interactableNumber: 2
   repairedToBrokenTime: 10
   nextBrokenStageTime: 5
   trashBin: 0
@@ -7009,7 +7010,7 @@ GameObject:
   - component: {fileID: 1158892258}
   - component: {fileID: 1158892257}
   m_Layer: 0
-  m_Name: Problem 1
+  m_Name: Problem 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7030,7 +7031,7 @@ RectTransform:
   - {fileID: 1705116424}
   - {fileID: 312813378}
   m_Father: {fileID: 977402141}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7050,7 +7051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7122,7 +7123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b63c2c3256ee2b49a2531a47bc9c6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableNumber: 0
+  interactableNumber: 7
   repairedToBrokenTime: 0
   nextBrokenStageTime: 0
   trashBin: 1
@@ -9237,7 +9238,7 @@ Transform:
   - {fileID: 493246398}
   - {fileID: 1363052254}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
 --- !u!65 &1432049066
 BoxCollider:
@@ -9264,7 +9265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451cc178c2d416c47ad5124152dddf5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableNumber: 1
+  interactableNumber: 3
   repairedToBrokenTime: 10
   nextBrokenStageTime: 5
   trashBin: 0
@@ -9576,7 +9577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11281,7 +11282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11636,7 +11637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11677,7 +11678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1875907794
 Transform:
   m_ObjectHideFlags: 0
@@ -11749,8 +11750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statusChanger:
-  - {fileID: 1382582788}
   - {fileID: 1135947711}
+  - {fileID: 1382582788}
   - {fileID: 1508882691}
   - {fileID: 1047673194}
   - {fileID: 1422006198}
@@ -11758,8 +11759,8 @@ MonoBehaviour:
   - {fileID: 377847656}
   - {fileID: 318364314}
   panelProblem:
-  - {fileID: 1158892257}
   - {fileID: 495734457}
+  - {fileID: 1158892257}
   - {fileID: 1545908823}
   - {fileID: 1862283623}
   - {fileID: 887359594}
