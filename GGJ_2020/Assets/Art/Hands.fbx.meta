@@ -1,22 +1,12 @@
 fileFormatVersion: 2
-guid: 61a2ca5f61f1cb74eb962cf0ea64d5bd
+guid: e9af94da54e5c864588b3cdc63503b5a
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: -623603649343465320
-    second: Scene
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Alpha_Body_MAT
-    second: {fileID: 2100000, guid: 1b9e5d22e62dbe947a442fc0637398f3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Alpha_Joints_MAT
-    second: {fileID: 2100000, guid: 0f18bbde0a8d3664a80de7351e1adb4e, type: 2}
+      74: -4791504522942941401
+    second: Armature|Armature|mixamo.com|Layer0
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -71,7 +61,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
