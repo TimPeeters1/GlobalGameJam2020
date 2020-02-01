@@ -17,11 +17,11 @@ public class ProblemList : MonoBehaviour
 
     private void Start()
     {
-        listCanvas.SetActive(false);
+        listCanvas.SetActive(true);
     }
     private void Update()
     {
-        CheckInput();
+        //CheckInput();
     }
     private void CheckInput()
     {
@@ -67,6 +67,11 @@ public class ProblemList : MonoBehaviour
         {
             panelProblem[problem].color = new Color32(255, 0, 0, 255);
             statusChanger[problem].text = "|  Danger";
+        }
+        else if (stageProblem == 5)
+        {
+            panelProblem[problem].color = new Color32(60, 60, 60, 255);
+            statusChanger[problem].text = "|  Broken";
         }
     }
 
