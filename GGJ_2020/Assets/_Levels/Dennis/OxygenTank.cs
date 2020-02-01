@@ -13,6 +13,7 @@ public class OxygenTank : Interactable
     public override void Awake()
     {
         base.Awake();
+        
         oxygenTankManager = GetComponentInParent<OxygenTankManager>();
     }
     public override void Update()
@@ -35,13 +36,16 @@ public class OxygenTank : Interactable
     }
     public override void Interact()
     {
+        ResetObject();
         if (destroyed)
         {
             return;
         }
 
         base.Interact();
-
+        StartReset();
+        ResetObject();
+        
         BrokenObjectManager.Instance.DisableScript(interactableNumber);
     }
 }
