@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
     private bool isColliding = false;
     private GameObject[] currentObject;
 
-    public virtual void Start()
+    public virtual void Awake()
     {
         StartReset();
         ResetObject();
@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour
         currentNextBrokenStageTimer = repairedToBrokenTime;
         currentStage = 1;
     }
-    private void ResetObject()
+    protected void ResetObject()
     {
         if(currentObject != null)
         {
