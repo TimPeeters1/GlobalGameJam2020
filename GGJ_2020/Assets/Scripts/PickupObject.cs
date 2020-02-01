@@ -6,7 +6,12 @@ public class PickupObject : MonoBehaviour
 {
     Animator anim;
     AudioSource source;
-    [SerializeField]AudioClip[] slapSounds;
+
+    [SerializeField] GameObject handAttachPos;
+
+    [SerializeField] AudioClip[] slapSounds;
+
+    GameObject currentItem;
 
     private void Start()
     {
@@ -16,13 +21,32 @@ public class PickupObject : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 3f, Color.red);
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.Play("Hit");
             source.PlayOneShot(slapSounds[Random.Range(0, slapSounds.Length)]);
             StartCoroutine(HitObject());
         }
+
+        if(currentItem != null && Input.GetKey(KeyCode.Mouse0)){
+            StartCoroutine(ReleaseObject());
+        }
+
+        if (currentItem)
+        {
+            currentItem.transform.position = handAttachPos.transform.position;
+        }
+    }
+    IEnumerator ReleaseObject()
+    {
+        currentItem.layer = 0;
+
+        yield return new WaitForSeconds(0.25f);
+
+        currentItem.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 300f);
+        currentItem = null;
+    
     }
 
     IEnumerator HitObject()
@@ -31,11 +55,23 @@ public class PickupObject : MonoBehaviour
 
         RaycastHit hit;
         Ray camRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
-        if (Physics.Raycast(camRay, out hit, 3f))
+        if (Physics.Raycast(camRay, out hit, 5f))
         {
             try
             {
-                hit.collider.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 1000f);
+                if (hit.collider.GetComponent<Pickup>())
+                {
+                    currentItem = hit.collider.gameObject;
+                    currentItem.layer = 10;
+                    hit.collider.gameObject.transform.position = handAttachPos.transform.position;
+                    hit.collider.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    hit.collider.transform.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                }
+                else
+                {
+                    hit.collider.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 50f);
+                }
+                
             }
             catch 
             {
