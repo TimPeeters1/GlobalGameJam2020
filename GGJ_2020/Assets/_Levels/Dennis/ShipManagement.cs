@@ -1,31 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine;
 
 public class ShipManagement : MonoBehaviour
 {
     //private serialized
-    [SerializeField] private float surviveTime;
+    [SerializeField] private int minutes;
+    [SerializeField] private int secondes;
+    [SerializeField] private TextMeshProUGUI timeText;
 
     //private
-    private float currentSurviveTimer;
+    private float currentSecondes;
     private bool timeActive = true;
-
-    void Start()
-    {
-        currentSurviveTimer = surviveTime;
-    }
 
     void Update()
     {
         if (timeActive)
         {
-            currentSurviveTimer = Timer(currentSurviveTimer);
+            currentSecondes = Timer(currentSecondes);
+            secondes = (int)currentSecondes;
+            if(secondes <= 0)
+            {
+                minutes--;
+                currentSecondes = 60;
+            }
 
-            if (currentSurviveTimer <= 0)
+            if (minutes <= 0 && secondes <= 0)
             {
                 WinGame();
             }
+
+            timeText.text = minutes + ":" + secondes;
         }
     }
 

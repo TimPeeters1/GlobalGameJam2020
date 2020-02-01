@@ -111,15 +111,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: digitalix SDF
+  m_Name: digitalix SDF 1
   m_EditorClassIdentifier: 
-  hashCode: -1204072998
+  hashCode: -1270468533
   material: {fileID: -4620766313344303455}
   materialHashCode: 931710225
   m_Version: 1.1.0
-  m_SourceFontFileGUID: b3b24c788ad6155429c2cacd01c8f3ed
-  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: b3b24c788ad6155429c2cacd01c8f3ed,
-    type: 3}
+  m_SourceFontFileGUID: 72f12783886be604cba7e3fc269ee094
+  m_SourceFontFile_EditorRef: {fileID: 0}
   m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
   m_FaceInfo:

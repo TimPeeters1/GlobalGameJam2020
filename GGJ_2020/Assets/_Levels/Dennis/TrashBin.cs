@@ -19,8 +19,6 @@ public class TrashBin : Interactable
     {
         base.Awake();
         increaseY = ((trashMaxY - trashMinY) / maxTrash);
-
-        Debug.Log(increaseY);
     }
     public override void Update()
     {
