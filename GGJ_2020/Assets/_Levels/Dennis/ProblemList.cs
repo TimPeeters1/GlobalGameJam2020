@@ -51,22 +51,22 @@ public class ProblemList : MonoBehaviour
         if(stageProblem == 1)
         {
             panelProblem[problem].color = new Color32(0, 255, 255, 255);
-            statusChanger[problem].text = "Operational";
+            statusChanger[problem].text = "|  Operational";
         }
         else if (stageProblem == 2)
         {
             panelProblem[problem].color = new Color32(255, 255, 0, 255);
-            statusChanger[problem].text = "Error";
+            statusChanger[problem].text = "|  Error";
         }
         else if (stageProblem == 3)
         {
             panelProblem[problem].color = new Color32(255, 150, 0, 255);
-            statusChanger[problem].text = "Warning";
+            statusChanger[problem].text = "|  Warning";
         }
         else if (stageProblem == 4)
         {
             panelProblem[problem].color = new Color32(255, 0, 0, 255);
-            statusChanger[problem].text = "Danger";
+            statusChanger[problem].text = "|  Danger";
         }
     }
 
