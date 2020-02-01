@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BrokenObjectManager : MonoBehaviour
 {
-    [SerializeField] private float nextEventTime;
+    [SerializeField] private float nextEventTimeMin;
+    [SerializeField] private float nextEventTimeMax;
     [SerializeField] private bool[] interactableActive;
     [SerializeField] private Interactable[] interactables;
 
@@ -36,7 +37,7 @@ public class BrokenObjectManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        currentNextEventTimer = nextEventTime;
+        currentNextEventTimer = nextEventTimeMax;
         
         for (int i = 0; i < interactables.Length; i++)
         {
@@ -58,7 +59,7 @@ public class BrokenObjectManager : MonoBehaviour
 
         if(currentNextEventTimer <= 0)
         {
-            currentNextEventTimer = Random.Range(nextEventTime * 0.75f, nextEventTime);
+            currentNextEventTimer = Random.Range(nextEventTimeMin, nextEventTimeMax);
             randomNumber = Random.Range(0, interactables.Length);
 
             for (int i = 0; i < interactables.Length; i++)
