@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6334742575896430034}
   - component: {fileID: 3076662715131281380}
   - component: {fileID: 8758948337016455965}
+  - component: {fileID: 1650253316695240038}
   m_Layer: 0
   m_Name: FBX_Closet
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8af3325e6a0c4f44da30d3eb1196f0c8, type: 2}
+  - {fileID: 2100000, guid: bf2aa996ebc41a54abb03d7002370832, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1650253316695240038
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7039934460570073025}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9010193167645078742, guid: 5ea3fd23653723f4fb4efba03a444ff9, type: 3}
