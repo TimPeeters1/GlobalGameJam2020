@@ -18,13 +18,33 @@ public class InteractionSystem : MonoBehaviour
 {
     public BrokenObjectType ObjectType;
 
-    private void OnTriggerStay(Collider other)
+    private bool isColliding = false;
+    private GameObject collider;
+
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<PlayerPickup>())
         {
-            if (other.gameObject.GetComponent<PlayerPickup>().currentItem)
+            isColliding = true;
+            collider = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerPickup>())
+        {
+            isColliding = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (isColliding)
+        {
+            if (collider.GetComponent<PlayerPickup>().currentItem)
             {
-                if (other.gameObject.gameObject.GetComponent<PlayerPickup>().currentItem.GetComponent<FixPickup>().FixableType == ObjectType
+                if (collider.gameObject.GetComponent<PlayerPickup>().currentItem.GetComponent<FixPickup>().FixableType == ObjectType
                     && Input.GetKeyDown(KeyCode.Mouse0))
                 {
 
@@ -47,12 +67,11 @@ public class InteractionSystem : MonoBehaviour
                 Debug.Log("Repaired without object");
             }
 
-            if(ObjectType == BrokenObjectType.NavigationSystem && Input.GetKeyDown(KeyCode.Mouse0))
+            if (ObjectType == BrokenObjectType.NavigationSystem && Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<SOSSystem>().DoPlug();
             }
-
-
+            
         }
     }
 }
