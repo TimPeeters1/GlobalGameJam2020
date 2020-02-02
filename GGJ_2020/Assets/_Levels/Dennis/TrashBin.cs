@@ -24,13 +24,11 @@ public class TrashBin : Interactable
         {
             ProblemList.Instance.UpdateList(interactableNumber, 4);
             trash[2].SetActive(true);
-            trash[1].SetActive(false);
         }
         else if(trashCount > (maxTrash * 0.50f))
         {
             ProblemList.Instance.UpdateList(interactableNumber, 3);
             trash[1].SetActive(true);
-            trash[0].SetActive(false);
         }
         else if (trashCount > (maxTrash * 0.25f))
         {
