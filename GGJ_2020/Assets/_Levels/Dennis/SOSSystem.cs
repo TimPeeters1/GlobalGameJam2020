@@ -48,19 +48,22 @@ public class SOSSystem : Interactable
 
     public void DoPlug()
     {
-        if (isOn)
+        if (this.enabled)
         {
-            plugOff.SetActive(true);
-            plugOn.SetActive(false);
-            isOn = false;
-        }
-        else
-        {
-            plugOff.SetActive(false);
-            plugOn.SetActive(true);
-            isOn = true;
+            if (isOn)
+            {
+                plugOff.SetActive(true);
+                plugOn.SetActive(false);
+                isOn = false;
+            }
+            else
+            {
+                plugOff.SetActive(false);
+                plugOn.SetActive(true);
+                isOn = true;
 
-            Interact();
+                Interact();
+            }
         }
     }
 }
