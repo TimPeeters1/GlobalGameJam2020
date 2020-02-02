@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
@@ -47,7 +45,7 @@ public class Interactable : MonoBehaviour
             }
         }
 
-        if(nextPhaseParticle != null)
+        if(nextPhaseParticle[0] != null)
         {
             for (int i = 0; i < nextPhaseParticle.Length; i++)
             {
@@ -124,7 +122,7 @@ public class Interactable : MonoBehaviour
             currentObject[0].SetActive(true);
             ProblemList.Instance.UpdateList(interactableNumber, 2);
 
-            if(nextPhaseParticle != null)
+            if(nextPhaseParticle[0] != null)
             {
                 nextPhaseParticle[0].SetActive(true);
             }
@@ -135,7 +133,7 @@ public class Interactable : MonoBehaviour
             currentObject[1].SetActive(true);
             ProblemList.Instance.UpdateList(interactableNumber, 3);
 
-            if (nextPhaseParticle != null)
+            if (nextPhaseParticle[0] != null)
             {
                 nextPhaseParticle[0].SetActive(true);
                 nextPhaseParticle[1].SetActive(true);
@@ -147,7 +145,7 @@ public class Interactable : MonoBehaviour
             currentObject[2].SetActive(true);
             ProblemList.Instance.UpdateList(interactableNumber, 4);
 
-            if (nextPhaseParticle != null)
+            if (nextPhaseParticle[0] != null)
             {
                 nextPhaseParticle[0].SetActive(true);
                 nextPhaseParticle[1].SetActive(true);
