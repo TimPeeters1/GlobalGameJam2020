@@ -15,39 +15,56 @@ public class ShipManagement : MonoBehaviour
     private float currentSecondes;
     private bool timeActive = true;
 
-    void Update()
+    private void Start()
+    {
+        currentSecondes = secondes;
+    }
+    private void Update()
     {
         if (timeActive)
         {
-            currentSecondes = Timer(currentSecondes);
-            secondes = (int)currentSecondes;
-            if(secondes <= 0)
-            {
-                minutes--;
-                currentSecondes = 60;
-            }
-
             if (minutes <= 0 && secondes <= 0)
             {
+                timeText.text = "0:00";
                 WinGame();
             }
+            else
+            {
+                currentSecondes = Timer(currentSecondes);
+                secondes = (int)currentSecondes;
 
-            timeText.text = minutes + ":" + secondes;
+                if (secondes <= 0)
+                {
+                    minutes--;
+                    currentSecondes = 60;
+                }
+
+                if (secondes >= 10)
+                {
+                    timeText.text = minutes + ":" + secondes;
+                }
+                else
+                {
+                    timeText.text = minutes + ":0" + secondes;
+                }
+            }
         }
     }
-
     public void TimeActive(bool timeStopped)
     {
         timeActive = timeStopped;
     }
-    private void WinGame()
-    {
-        Debug.Log("WinGame");
-    }
     public void GameOver()
     {
         Debug.Log("GameOver");
+        Time.timeScale = 0f;
     }
+    private void WinGame()
+    {
+        Debug.Log("WinGame");
+        Time.timeScale = 0f;
+    }
+
     private float Timer(float timer)
     {
         timer -= Time.deltaTime;

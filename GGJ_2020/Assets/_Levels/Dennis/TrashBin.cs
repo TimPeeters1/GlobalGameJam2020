@@ -57,6 +57,7 @@ public class TrashBin : Interactable
         if(trashCount == maxTrash)
         {
             Debug.Log("Trashcan overloaded");
+            ShipManagement.Instance.GameOver();
         }
     }
 }
