@@ -7,6 +7,7 @@ public class Interactable : MonoBehaviour
     [Header("General Stuff")]
     //protected
     [SerializeField] protected int interactableNumber;
+    [SerializeField] protected GameObject[] nextPhaseParticle;
     protected float currentStage = 1;
     protected bool isColliding = false;
 
@@ -43,6 +44,14 @@ public class Interactable : MonoBehaviour
             for (int i = 0; i < currentObject.Length; i++)
             {
                 currentObject[i].SetActive(false);
+            }
+        }
+
+        if(nextPhaseParticle != null)
+        {
+            for (int i = 0; i < nextPhaseParticle.Length; i++)
+            {
+                nextPhaseParticle[i].SetActive(false);
             }
         }
     }
@@ -104,6 +113,7 @@ public class Interactable : MonoBehaviour
         if (currentStage == 0)
         {
             ProblemList.Instance.UpdateList(interactableNumber, 1);
+
         }
         if (currentStage == 1)
         {
@@ -113,18 +123,36 @@ public class Interactable : MonoBehaviour
         {
             currentObject[0].SetActive(true);
             ProblemList.Instance.UpdateList(interactableNumber, 2);
+
+            if(nextPhaseParticle != null)
+            {
+                nextPhaseParticle[0].SetActive(true);
+            }
         }
         else if (currentStage == 3)
         {
             currentObject[0].SetActive(false);
             currentObject[1].SetActive(true);
             ProblemList.Instance.UpdateList(interactableNumber, 3);
+
+            if (nextPhaseParticle != null)
+            {
+                nextPhaseParticle[0].SetActive(true);
+                nextPhaseParticle[1].SetActive(true);
+            }
         }
         else if (currentStage == 4)
         {
             currentObject[1].SetActive(false);
             currentObject[2].SetActive(true);
             ProblemList.Instance.UpdateList(interactableNumber, 4);
+
+            if (nextPhaseParticle != null)
+            {
+                nextPhaseParticle[0].SetActive(true);
+                nextPhaseParticle[1].SetActive(true);
+                nextPhaseParticle[2].SetActive(true);
+            }
         }
         //Bij stage 5 is het object helemaal kapot
         else if (currentStage == 5 && lastStage)

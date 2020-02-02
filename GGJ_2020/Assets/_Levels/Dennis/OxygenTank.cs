@@ -25,6 +25,11 @@ public class OxygenTank : Interactable
             oxygenBrokenTank[2].SetActive(false);
             oxygenBrokenTank[3].SetActive(true);
 
+            for (int i = 0; i < nextPhaseParticle.Length; i++)
+            {
+                nextPhaseParticle[i].SetActive(false);
+            }
+
             ProblemList.Instance.UpdateList(interactableNumber, 5);
             oxygenTankManager.OxygenTankDestroyed();
             return;

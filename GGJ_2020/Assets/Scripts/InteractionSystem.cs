@@ -17,6 +17,7 @@ public enum BrokenObjectType
 public class InteractionSystem : MonoBehaviour
 {
     public BrokenObjectType ObjectType;
+    public ParticleSystem repairSmoke;
 
     private bool isColliding = false;
     private GameObject collider;
@@ -58,6 +59,7 @@ public class InteractionSystem : MonoBehaviour
                     }
 
                     Debug.Log("Repaired");
+                    repairSmoke.Play();
 
                     collider.gameObject.GetComponent<PlayerPickup>().currentItem.SetActive(false);
                 }

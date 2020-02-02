@@ -16,6 +16,8 @@ public class GeneralBroken : Interactable
         {
             objectBrokenStages[i].SetActive(false);
         }
+
+
     }
     public override void Update()
     {
