@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour
     //protected
     [SerializeField] protected int interactableNumber;
     protected float currentStage = 1;
+    protected bool isColliding = false;
 
     //private serialized
     [SerializeField] private float repairedToBrokenTime;
@@ -17,7 +18,6 @@ public class Interactable : MonoBehaviour
 
     //private
     private float currentNextBrokenStageTimer;
-    private bool isColliding = false;
     private GameObject[] currentObject;
 
     private void OnEnable()

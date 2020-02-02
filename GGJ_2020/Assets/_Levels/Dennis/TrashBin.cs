@@ -10,15 +10,25 @@ public class TrashBin : Interactable
     [SerializeField] private GameObject[] trash;
 
     //private
-    private int trashCount;
+    private int trashCount = 5;
+    private Animator anim;
 
     public override void Awake()
     {
         base.Awake();
+        anim = GetComponent<Animator>();
     }
     public override void Update()
     {
         base.Update();
+
+        if (isColliding)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Interact();
+            }
+        }
 
         if(trashCount > (maxTrash * 0.75f))
         {
@@ -46,6 +56,7 @@ public class TrashBin : Interactable
     public override void Interact()
     {
         trashCount = 0;
+        anim.SetTrigger("Deposit");
     }
 
     public void AddTrash()
