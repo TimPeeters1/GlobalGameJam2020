@@ -20,6 +20,11 @@ public class Interactable : MonoBehaviour
     private bool isColliding = false;
     private GameObject[] currentObject;
 
+    private void OnEnable()
+    {
+        currentObject[currentObject.Length - 1].SetActive(false);
+    }
+
     public virtual void Awake()
     {
         StartReset();
@@ -77,8 +82,8 @@ public class Interactable : MonoBehaviour
             trashScript.AddTrash();
         }
 
+        currentObject[currentObject.Length - 1].SetActive(true);
         ProblemList.Instance.UpdateList(interactableNumber, 1);
-
     }
     private void StageTimer()
     {
@@ -89,14 +94,17 @@ public class Interactable : MonoBehaviour
             currentNextBrokenStageTimer = nextBrokenStageTime;
             currentStage++;
         }
-        
     }
     protected void Stages(GameObject[] objectChanges, bool lastStage)
     {
         currentObject = objectChanges;
 
         //Bij stage 1 is alles onder controle
-        if(currentStage == 1)
+        if (currentStage == 0)
+        {
+            ProblemList.Instance.UpdateList(interactableNumber, 1);
+        }
+        if (currentStage == 1)
         {
             ProblemList.Instance.UpdateList(interactableNumber, 1);
         }
@@ -124,6 +132,10 @@ public class Interactable : MonoBehaviour
             currentObject[2].SetActive(false);
             ShipManagement.Instance.GameOver();
             //The thing is broken, the player loses
+        }
+        else if(currentStage == 6)
+        {
+
         }
     }
     private float Timer(float timer)

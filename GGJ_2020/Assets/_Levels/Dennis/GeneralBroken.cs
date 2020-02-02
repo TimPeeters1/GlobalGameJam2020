@@ -11,6 +11,11 @@ public class GeneralBroken : Interactable
     public override void Awake()
     {
         base.Awake();
+
+        for (int i = 0; i < objectBrokenStages.Length; i++)
+        {
+            objectBrokenStages[i].SetActive(false);
+        }
     }
     public override void Update()
     {
@@ -25,9 +30,9 @@ public class GeneralBroken : Interactable
     public override void Interact()
     {
 
-        base.Interact();
         StartReset();
         ResetObject();
+        base.Interact();
 
         BrokenObjectManager.Instance.DisableScript(interactableNumber);
     }
