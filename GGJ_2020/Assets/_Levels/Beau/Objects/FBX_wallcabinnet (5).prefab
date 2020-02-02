@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5091465567570621383}
   - component: {fileID: 4319939722653911537}
   - component: {fileID: 7552267338216191240}
+  - component: {fileID: 6952589114434354849}
   m_Layer: 0
   m_Name: FBX_wallcabinnet (5)
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6952589114434354849
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139092140467356116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3176710501395305758, guid: 37e9dc433a9daf94a995e37414beb642, type: 3}
