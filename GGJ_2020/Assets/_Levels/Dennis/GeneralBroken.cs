@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InteractionSystem))]
 public class GeneralBroken : Interactable
 {
     //private serialized
@@ -23,10 +24,12 @@ public class GeneralBroken : Interactable
     }
     public override void Interact()
     {
+
         base.Interact();
         StartReset();
         ResetObject();
 
         BrokenObjectManager.Instance.DisableScript(interactableNumber);
     }
+
 }

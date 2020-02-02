@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickupObject : MonoBehaviour
+public class PlayerPickup : MonoBehaviour
 {
     Animator anim;
     AudioSource source;
@@ -11,7 +11,7 @@ public class PickupObject : MonoBehaviour
 
     [SerializeField] AudioClip[] slapSounds;
 
-    GameObject currentItem;
+    public GameObject currentItem;
 
     private void Start()
     {
@@ -59,7 +59,7 @@ public class PickupObject : MonoBehaviour
         {
             try
             {
-                if (hit.collider.GetComponent<Pickup>())
+                if (hit.collider.GetComponent<FixPickup>())
                 {
                     currentItem = hit.collider.gameObject;
                     currentItem.layer = 10;
