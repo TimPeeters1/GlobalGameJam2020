@@ -37,7 +37,6 @@ public class OxygenTank : Interactable
     }
     public override void Interact()
     {
-        ResetObject();
         if (destroyed)
         {
             return;

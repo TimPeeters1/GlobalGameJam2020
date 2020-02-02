@@ -65,7 +65,7 @@ public class Interactable : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Interact();
+                //Interact();
             }
         }
     }
