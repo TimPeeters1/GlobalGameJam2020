@@ -6,8 +6,17 @@ public class SOSSystem : Interactable
 {
     //private serialized
     [SerializeField] private GameObject[] objectBrokenStages;
+
+    [SerializeField] GameObject plugOn;
+    [SerializeField] GameObject plugOff;
+
+    bool isOn;
+
     public override void Awake()
     {
+        plugOn.SetActive(true);
+        plugOff.SetActive(false);
+        isOn = true;
         base.Awake();
     }
     public override void Update()
@@ -26,6 +35,7 @@ public class SOSSystem : Interactable
         }
     }
 
+
     public override void Interact()
     {
         base.Interact();
@@ -34,5 +44,23 @@ public class SOSSystem : Interactable
 
         ShipManagement.Instance.TimeActive(true);
         BrokenObjectManager.Instance.DisableScript(interactableNumber);
+    }
+
+    public void DoPlug()
+    {
+        if (isOn)
+        {
+            plugOff.SetActive(true);
+            plugOn.SetActive(false);
+            isOn = false;
+        }
+        else
+        {
+            plugOff.SetActive(false);
+            plugOn.SetActive(true);
+            isOn = true;
+
+            Interact();
+        }
     }
 }

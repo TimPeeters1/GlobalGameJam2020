@@ -24,11 +24,19 @@ public class InteractionSystem : MonoBehaviour
         {
             if (other.gameObject.GetComponent<PlayerPickup>().currentItem)
             {
-                if (other.gameObject.gameObject.GetComponent<PlayerPickup>()
-                    .currentItem.GetComponent<FixPickup>().FixableType == ObjectType
+                if (other.gameObject.gameObject.GetComponent<PlayerPickup>().currentItem.GetComponent<FixPickup>().FixableType == ObjectType
                     && Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    GetComponent<GeneralBroken>().Interact();
+
+                    if (GetComponent<GeneralBroken>())
+                    {
+                        GetComponent<GeneralBroken>().Interact();
+                    }
+                    if (GetComponent<OxygenTank>())
+                    {
+                        GetComponent<OxygenTank>().Interact();
+                    }
+
                     Debug.Log("Repaired");
                 }
             }
@@ -38,6 +46,13 @@ public class InteractionSystem : MonoBehaviour
                 GetComponent<GeneralBroken>().Interact();
                 Debug.Log("Repaired without object");
             }
+
+            if(ObjectType == BrokenObjectType.NavigationSystem && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                GetComponent<SOSSystem>().DoPlug();
+            }
+
+
         }
     }
 }
