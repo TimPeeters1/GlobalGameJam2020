@@ -2520,27 +2520,27 @@ PrefabInstance:
     - target: {fileID: 3846037138569439017, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3846037138569439017, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3846037138569439017, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3846037138569439017, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3846037138569439017, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4759692246383257216, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
@@ -2579,6 +2579,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
+        type: 3}
       propertyPath: m_GravityMultiplier
       value: 2
       objectReference: {fileID: 0}
@@ -2599,38 +2604,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
-      propertyPath: m_HeadBob.HorizontalBobRange
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
-        type: 3}
-      propertyPath: m_HeadBob.VerticalBobRange
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
-        type: 3}
-      propertyPath: m_HeadBob.VerticaltoHorizontalRatio
+      propertyPath: m_UseHeadBob
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
-      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[1].value
-      value: 0.13999863
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[4].time
+      value: 4.0241394
       objectReference: {fileID: 0}
     - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
-      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[1].time
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
-        type: 3}
-      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[3].value
-      value: -0.14999695
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[4].value
+      value: -0.0025024414
       objectReference: {fileID: 0}
     - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
       propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[3].time
-      value: 1.4916687
+      value: 3.0135803
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[3].value
+      value: -0.19513245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[1].time
+      value: 0.99318695
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[1].value
+      value: 0.268573
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[2].time
+      value: 2.0119476
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
+        type: 3}
+      propertyPath: m_HeadBob.Bobcurve.m_Curve.Array.data[2].value
+      value: -0.020401001
       objectReference: {fileID: 0}
     - target: {fileID: 4985113829656735858, guid: d25928617629cce4c972f38da6c5c245,
         type: 3}
@@ -3085,8 +3100,18 @@ MonoBehaviour:
   minutes: 5
   secondes: 0
   firstPersonController: {fileID: 0}
+  mouseLook:
+    XSensitivity: 2
+    YSensitivity: 2
+    clampVerticalRotation: 1
+    MinimumX: -90
+    MaximumX: 90
+    smooth: 0
+    smoothTime: 5
+    lockCursor: 1
   timeText: {fileID: 474764105}
   winGamePanel: {fileID: 0}
+  loseGamePanel: {fileID: 0}
 --- !u!4 &269412756
 Transform:
   m_ObjectHideFlags: 0

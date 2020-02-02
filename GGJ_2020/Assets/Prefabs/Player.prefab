@@ -2001,6 +2001,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 43e5356e36e66dc49a31f9bc8a9e5992, type: 3}
   - {fileID: 8300000, guid: b696d625f0d921f46aacac7fde393f12, type: 3}
   - {fileID: 8300000, guid: bd76d12e00f75a840be4f60a0a13e7fb, type: 3}
+  currentItem: {fileID: 0}
 --- !u!114 &2321176582822852390
 MonoBehaviour:
   m_ObjectHideFlags: 0
