@@ -1580,6 +1580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minutes: 0
   secondes: 15
+  firstPersonController: {fileID: 725732322}
   timeText: {fileID: 1313943212}
 --- !u!4 &269412756
 Transform:
@@ -4118,6 +4119,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &725732322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4985113829650749874, guid: d25928617629cce4c972f38da6c5c245,
+    type: 3}
+  m_PrefabInstance: {fileID: 250256987}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &728948981
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,7 +9,11 @@ public class ShipManagement : MonoBehaviour
     //private serialized
     [SerializeField] private int minutes;
     [SerializeField] private int secondes;
+    [Space]
+    [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
     [SerializeField] private TextMeshProUGUI timeText;
+    [Space]
+    [SerializeField] private GameObject winGamePanel;
 
     //private
     private float currentSecondes;
@@ -58,11 +62,13 @@ public class ShipManagement : MonoBehaviour
     {
         Debug.Log("GameOver");
         Time.timeScale = 0f;
+        firstPersonController.enabled = false;
     }
     private void WinGame()
     {
         Debug.Log("WinGame");
         Time.timeScale = 0f;
+        firstPersonController.enabled = false;
     }
 
     private float Timer(float timer)
