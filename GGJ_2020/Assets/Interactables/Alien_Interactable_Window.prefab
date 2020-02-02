@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6216101328597293838}
   - component: {fileID: 4575402960987000058}
   - component: {fileID: 6888194037404059131}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 5388696279983924122}
   - component: {fileID: 2621184567078519712}
   - component: {fileID: 6180027921773474828}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 5933327826761661405}
   - component: {fileID: 8114465918499777336}
   - component: {fileID: 397876987242148657}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cheeks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 33500193092031345}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 4445443403552914340}
   - component: {fileID: 5376908057037587469}
   - component: {fileID: 6595054572774241269}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Alien_Interactable_Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 6242077887508495902}
   - component: {fileID: 1967145541926035495}
   - component: {fileID: 8727815130478953880}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EyeWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 5012939543628440051}
   - component: {fileID: 8753525569005952677}
   - component: {fileID: 3094160414372236411}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EyeBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 7148525689601719728}
   - component: {fileID: 2570190132585678597}
   - component: {fileID: 7064300362957139153}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Toung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 1218086579435552004}
   - component: {fileID: 9168835634228887718}
   - component: {fileID: 2242766995383628549}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 7694375629607167871}
   - component: {fileID: 3746527608773925801}
   - component: {fileID: 6691384635931244966}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 8602044700666299036}
   - component: {fileID: 949467273715761701}
   - component: {fileID: 4821367323624291432}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,6 +855,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 858563413088471478}
     m_Modifications:
+    - target: {fileID: 1789193235739350866, guid: b4c4cc60f3b18b2498b3b080a261633d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2335785728028863793, guid: b4c4cc60f3b18b2498b3b080a261633d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -929,6 +934,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFX_creatureTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150710058027095080, guid: b4c4cc60f3b18b2498b3b080a261633d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340161124489205756, guid: b4c4cc60f3b18b2498b3b080a261633d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c4cc60f3b18b2498b3b080a261633d, type: 3}

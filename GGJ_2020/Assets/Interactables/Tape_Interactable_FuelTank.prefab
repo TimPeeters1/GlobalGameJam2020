@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3240102788508041984}
   - component: {fileID: 592611443712287511}
   - component: {fileID: 8641343292693027030}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 5676641671172498323}
   - component: {fileID: 4476903196335033471}
   - component: {fileID: 7494177880918069127}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 4459106475846408580}
   - component: {fileID: 3165914013155521985}
   - component: {fileID: 2225167120327503238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 2004815207993239447}
   - component: {fileID: 2004815207993239435}
   - component: {fileID: 3128343739199489608}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tape_Interactable_FuelTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8862173003781664336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FBX_Ducttape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
