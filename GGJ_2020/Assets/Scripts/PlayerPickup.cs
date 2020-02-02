@@ -55,7 +55,7 @@ public class PlayerPickup : MonoBehaviour
 
         RaycastHit hit;
         Ray camRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
-        if (Physics.Raycast(camRay, out hit, 5f))
+        if (Physics.Raycast(camRay, out hit, 7f))
         {
             try
             {

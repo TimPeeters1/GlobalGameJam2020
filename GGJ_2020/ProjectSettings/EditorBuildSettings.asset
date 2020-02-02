@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Levels/Dennis/DennisBlockout.unity
-    guid: a64579ef5cbbdf64dabea81163e909df
+    path: Assets/_Levels/Menu.unity
+    guid: 8a834c5e13eda0847ac8968745678f11
+  - enabled: 1
+    path: Assets/_Levels/Thijs/ThijsBlockout 1.unity
+    guid: 64f89704b4a74494ea0ff3e53507d974
   m_configObjects: {}

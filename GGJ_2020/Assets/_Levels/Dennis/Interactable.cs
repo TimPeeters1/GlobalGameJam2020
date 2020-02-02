@@ -22,6 +22,7 @@ public class Interactable : MonoBehaviour
 
     private void OnEnable()
     {
+        if(currentObject != null)
         currentObject[currentObject.Length - 1].SetActive(false);
     }
 

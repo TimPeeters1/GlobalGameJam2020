@@ -58,18 +58,22 @@ public class InteractionSystem : MonoBehaviour
                     }
 
                     Debug.Log("Repaired");
+
+                    collider.gameObject.GetComponent<PlayerPickup>().currentItem.SetActive(false);
                 }
             }
 
-            if (ObjectType == BrokenObjectType.None && Input.GetKeyDown(KeyCode.Mouse0))
+            if ((ObjectType == BrokenObjectType.None || ObjectType == BrokenObjectType.Database) && Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<GeneralBroken>().Interact();
                 Debug.Log("Repaired without object");
+
             }
 
             if (ObjectType == BrokenObjectType.NavigationSystem && Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<SOSSystem>().DoPlug();
+
             }
             
         }

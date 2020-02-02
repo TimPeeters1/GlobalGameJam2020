@@ -164,8 +164,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 5:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8974917035211a44aa54473e1ec2f88b, type: 2}
-  m_sharedMaterial: {fileID: 2430537996608605533, guid: 8974917035211a44aa54473e1ec2f88b,
+  m_fontAsset: {fileID: 11400000, guid: db3b3f8716b1cbf4fb4de6ecafc1d370, type: 2}
+  m_sharedMaterial: {fileID: -219995516733231109, guid: db3b3f8716b1cbf4fb4de6ecafc1d370,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -288,10 +288,10 @@ RectTransform:
   m_Father: {fileID: 1628872265926892389}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 142}
-  m_SizeDelta: {x: -539.4, y: -300.7}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1628872267553614987
 CanvasRenderer:
