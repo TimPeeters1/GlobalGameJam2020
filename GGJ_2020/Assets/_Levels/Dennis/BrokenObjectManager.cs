@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class BrokenObjectManager : MonoBehaviour
 {
+    [SerializeField] private int timeEventChange;
     [SerializeField] private float nextEventTimeMin;
     [SerializeField] private float nextEventTimeMax;
     [SerializeField] private bool[] interactableActive;
     [SerializeField] private Interactable[] interactables;
 
     private int randomNumber;
+    private int minutesGame;
     private float currentNextEventTimer;
     private bool objectFalse;
 
@@ -45,10 +47,19 @@ public class BrokenObjectManager : MonoBehaviour
             interactableActive[i] = false;
         }
 
+        minutesGame = ShipManagement.Instance.minutes;
     }
     void Update()
     {
         NextEventChecker();
+
+        if(ShipManagement.Instance.minutes == minutesGame - 1)
+        {
+            minutesGame = ShipManagement.Instance.minutes;
+
+            nextEventTimeMin -= timeEventChange;
+            nextEventTimeMax -= timeEventChange;
+        }
     }
     private void NextEventChecker()
     {

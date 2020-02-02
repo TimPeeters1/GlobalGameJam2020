@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class ShipManagement : MonoBehaviour
 {
+    //public
+    public int minutes;
+
     //private serialized
-    [SerializeField] private int minutes;
     [SerializeField] private int secondes;
     [Space]
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
