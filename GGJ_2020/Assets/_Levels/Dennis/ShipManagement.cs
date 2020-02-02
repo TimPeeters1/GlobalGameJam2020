@@ -11,9 +11,11 @@ public class ShipManagement : MonoBehaviour
     [SerializeField] private int secondes;
     [Space]
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
+    [SerializeField] private UnityStandardAssets.Characters.FirstPerson.MouseLook mouseLook;
     [SerializeField] private TextMeshProUGUI timeText;
     [Space]
     [SerializeField] private GameObject winGamePanel;
+    [SerializeField] private GameObject loseGamePanel;
 
     //private
     private float currentSecondes;
@@ -58,17 +60,24 @@ public class ShipManagement : MonoBehaviour
     {
         timeActive = timeStopped;
     }
+
+    private void EndGame()
+    {
+        Time.timeScale = 0f;
+        firstPersonController.enabled = false;
+        mouseLook.EnableMouse();
+    }
     public void GameOver()
     {
         Debug.Log("GameOver");
-        Time.timeScale = 0f;
-        firstPersonController.enabled = false;
+        EndGame();
+        loseGamePanel.SetActive(true);
     }
     private void WinGame()
     {
         Debug.Log("WinGame");
-        Time.timeScale = 0f;
-        firstPersonController.enabled = false;
+        EndGame();
+        winGamePanel.SetActive(true);
     }
 
     private float Timer(float timer)
@@ -82,6 +91,7 @@ public class ShipManagement : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        Time.timeScale = 1f;
     }
 
     public static ShipManagement Instance
